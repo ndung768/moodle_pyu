@@ -1,0 +1,39 @@
+{
+  "name": "mynaparrot/plugnmeet-sdk",
+  "description": "plugNmeet PHP SDK",
+  "type": "library",
+  "license": "MIT",
+  "version": "2.1.0",
+  "autoload": {
+    "psr-4": {
+      "Mynaparrot\\Plugnmeet\\": "src/",
+      "Mynaparrot\\PlugnmeetProto\\": "src/gen/Mynaparrot/PlugnmeetProto",
+      "GPBMetadata\\": "src/gen/GPBMetadata",
+      "Livekit\\": "src/gen/Livekit"
+    }
+  },
+  "authors": [
+    {
+      "name": "Jibon Costa",
+      "email": "jibon@mynaparrot.com"
+    }
+  ],
+  "scripts": {
+    "phpcs": "phpcs --standard=PSR12 src/PlugNmeet.php",
+    "phpcbf": "phpcbf --standard=PSR12 src/PlugNmeet.php"
+  },
+  "require": {
+    "php": "^8.0",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "ext-bcmath": "*",
+    "ramsey/uuid": "4.9.2",
+    "firebase/php-jwt": "7.0.2",
+    "guzzlehttp/guzzle": "7.10",
+    "google/protobuf": "4.33.4"
+  },
+  "require-dev": {
+    "overtrue/phplint": "9.7.1",
+    "squizlabs/php_codesniffer": "4.0.1"
+  }
+}

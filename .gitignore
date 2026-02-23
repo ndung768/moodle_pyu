@@ -60,3 +60,12 @@ phpcs.xml
 jsconfig.json
 UPGRADING-CURRENT.md
 .phpunit.cache
+
+config.php
+moodledata/
+cache/
+localcache/
+temp/
+sessions/
+*.log
+node_modules/
