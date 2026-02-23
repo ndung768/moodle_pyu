@@ -1,0 +1,53 @@
+{{!
+    @template theme_phuyen/header
+
+    Sticky navbar - Logo left, menu, login button (red).
+}}
+<header class="phuyen-header">
+    <nav class="navbar navbar-expand-lg fixed-top phuyen-navbar" aria-label="{{#str}}sitemenubar, admin{{/str}}">
+        <div class="container-fluid">
+            <a href="{{{ config.wwwroot }}}" class="navbar-brand d-flex align-items-center me-4" title="{{sitename}}">
+                {{# output.should_display_navbar_logo }}
+                    <img src="{{output.get_compact_logo_url}}" class="phuyen-logo me-2" alt="{{sitename}}">
+                {{/ output.should_display_navbar_logo }}
+                {{^ output.should_display_navbar_logo }}
+                    <span class="phuyen-sitename">{{{ sitename }}}</span>
+                {{/ output.should_display_navbar_logo }}
+            </a>
+
+            <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse"
+                data-bs-target="#phuyen-nav" aria-controls="phuyen-nav" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="phuyen-nav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{{ config.wwwroot }}}/">{{#str}}navhome, theme_phuyen{{/str}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{{ config.wwwroot }}}/course/">{{#str}}navcourses, theme_phuyen{{/str}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{{ config.wwwroot }}}/message/">{{#str}}navnotifications, theme_phuyen{{/str}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{{ config.wwwroot }}}/help.php">{{#str}}navsupport, theme_phuyen{{/str}}</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-2">
+                    {{#langmenu}}
+                        {{> theme_boost/language_menu }}
+                    {{/langmenu}}
+                    {{{ output.search_box }}}
+                    {{{ output.navbar_plugin_output }}}
+                    <div data-region="usermenu">
+                        {{#usermenu}}
+                            {{> core/user_menu }}
+                        {{/usermenu}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

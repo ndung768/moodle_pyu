@@ -1,0 +1,271 @@
+//
+// PYU Theme Overrides
+// Card-style UI, rounded corners, soft shadows, blue sidebar, red progress
+//
+
+// ==========================================================================
+// Global
+// ==========================================================================
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+// ==========================================================================
+// Cards - 14px radius, soft shadows
+// ==========================================================================
+.card,
+.block,
+.list-group-item,
+.bg-white {
+    border-radius: $pyu-border-radius !important;
+    box-shadow: $pyu-shadow-soft !important;
+    border: 1px solid rgba($pyu-primary-blue, 0.06) !important;
+    transition: $pyu-transition;
+}
+
+.card:hover,
+.block:hover {
+    box-shadow: $pyu-shadow-card !important;
+}
+
+.card-body {
+    border-radius: 0 0 $pyu-border-radius $pyu-border-radius;
+}
+
+.card-header {
+    border-radius: $pyu-border-radius $pyu-border-radius 0 0;
+    border-bottom: 1px solid rgba($pyu-primary-blue, 0.08);
+}
+
+// ==========================================================================
+// Navbar - Blue brand
+// ==========================================================================
+.navbar {
+    background: linear-gradient(135deg, $pyu-primary-blue 0%, $pyu-primary-blue-dark 100%) !important;
+    box-shadow: 0 4px 20px rgba($pyu-primary-blue, 0.3);
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link,
+.navbar .btn-link,
+.navbar .dropdown-toggle,
+.navbar .icon {
+    color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.navbar .navbar-brand:hover,
+.navbar .nav-link:hover,
+.navbar .dropdown-toggle:hover {
+    color: #fff !important;
+}
+
+.navbar .dropdown-menu {
+    border-radius: $pyu-border-radius;
+    box-shadow: $pyu-shadow-card;
+    border: 1px solid rgba($pyu-primary-blue, 0.1);
+}
+
+// ==========================================================================
+// Drawer / Sidebar - Blue background
+// ==========================================================================
+.drawer,
+[data-region="drawer"],
+#theme_boost-drawers-courseindex,
+#theme_boost-drawers-blocks {
+    background: linear-gradient(180deg, $pyu-primary-blue 0%, $pyu-primary-blue-dark 100%) !important;
+}
+
+.drawer .list-group-item,
+.drawer .drawercontent .list-group-item,
+[data-region="drawer"] .list-group-item {
+    background: transparent !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    border-radius: 10px !important;
+}
+
+.drawer .list-group-item:hover,
+.drawer .list-group-item-action:hover,
+[data-region="drawer"] .list-group-item:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #fff !important;
+}
+
+.drawer .list-group-item.active,
+.drawer .list-group-item-action.active,
+[data-region="drawer"] .list-group-item.active {
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: #fff !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.drawer .drawerheader,
+.drawerheader {
+    background: rgba(0, 0, 0, 0.15) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.drawer .icon,
+[data-region="drawer"] .icon {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+// ==========================================================================
+// Progress bars - Red accent
+// ==========================================================================
+.progress,
+.progress-bar {
+    border-radius: 10px !important;
+    height: 8px !important;
+}
+
+.progress-bar,
+.progress-bar.bg-primary,
+.progress-bar.bg-success {
+    background: linear-gradient(90deg, $pyu-primary-red 0%, darken($pyu-primary-red, 5%) 100%) !important;
+}
+
+.bg-danger {
+    background-color: $pyu-primary-red !important;
+}
+
+// ==========================================================================
+// Buttons
+// ==========================================================================
+.btn-primary {
+    background: linear-gradient(135deg, $pyu-primary-blue 0%, $pyu-primary-blue-dark 100%);
+    border: none;
+    border-radius: $pyu-border-radius;
+    box-shadow: 0 4px 14px rgba($pyu-primary-blue, 0.35);
+    transition: $pyu-transition;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, $pyu-primary-blue-light 0%, $pyu-primary-blue 100%);
+    box-shadow: 0 6px 20px rgba($pyu-primary-blue, 0.4);
+    transform: translateY(-1px);
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, $pyu-primary-red 0%, darken($pyu-primary-red, 8%) 100%);
+    border: none;
+    border-radius: $pyu-border-radius;
+}
+
+.btn-danger:hover {
+    background: linear-gradient(135deg, lighten($pyu-primary-red, 5%) 0%, $pyu-primary-red 100%);
+}
+
+// ==========================================================================
+// Main content area - Card style
+// ==========================================================================
+#page.drawers .main-inner {
+    border-radius: $pyu-border-radius;
+    box-shadow: $pyu-shadow-card;
+    border: 1px solid rgba($pyu-primary-blue, 0.06);
+    padding: 1.5rem 1.5rem 2rem !important;
+}
+
+// ==========================================================================
+// Hero section - Gradient (Dashboard, Frontpage, Mycourses)
+// ==========================================================================
+body.pagelayout-mydashboard,
+body.pagelayout-frontpage,
+body.pagelayout-mycourses {
+    #page.drawers .main-inner {
+        padding-top: 0 !important;
+        overflow: hidden;
+    }
+}
+
+.pyu-hero {
+    background: linear-gradient(135deg, $pyu-primary-blue 0%, $pyu-primary-blue-light 50%, rgba($pyu-primary-red, 0.15) 100%);
+    border-radius: $pyu-border-radius $pyu-border-radius 0 0;
+    padding: 2.5rem 2rem 2rem;
+    margin: -1.5rem -1.5rem 2rem -1.5rem;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40%;
+        height: 100%;
+        background: radial-gradient(ellipse at 100% 50%, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+        pointer-events: none;
+    }
+}
+
+.pyu-hero h1,
+.pyu-hero .pyu-hero-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.pyu-hero .pyu-hero-subtitle {
+    font-size: 1rem;
+    opacity: 0.95;
+    margin: 0;
+}
+
+// ==========================================================================
+// Activity completion, course progress
+// ==========================================================================
+.completion-progress,
+.course-progress {
+    .progress-bar {
+        background: linear-gradient(90deg, $pyu-primary-red 0%, darken($pyu-primary-red, 5%) 100%) !important;
+    }
+}
+
+// ==========================================================================
+// Links
+// ==========================================================================
+a {
+    color: $pyu-primary-blue;
+}
+
+a:hover {
+    color: $pyu-primary-blue-dark;
+}
+
+// ==========================================================================
+// Forms
+// ==========================================================================
+.form-control,
+.form-select {
+    border-radius: 10px;
+    border-color: rgba($pyu-primary-blue, 0.2);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: $pyu-primary-blue;
+    box-shadow: 0 0 0 0.2rem rgba($pyu-primary-blue, 0.2);
+}
+
+// ==========================================================================
+// Responsive
+// ==========================================================================
+@media (max-width: 768px) {
+    .pyu-hero {
+        padding: 1.75rem 1.25rem 1.5rem;
+        margin: -1rem -1rem 1.5rem -1rem;
+    }
+
+    .pyu-hero h1,
+    .pyu-hero .pyu-hero-title {
+        font-size: 1.35rem;
+    }
+
+    #page.drawers .main-inner {
+        padding: 1rem !important;
+    }
+}

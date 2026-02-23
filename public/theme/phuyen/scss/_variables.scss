@@ -1,0 +1,27 @@
+// ==========================================================================
+// Phu Yen University - Theme Variables
+// ==========================================================================
+
+// Brand
+$phuyen-primary-blue: #3F4594 !default;
+$phuyen-primary-red: #EF2B2D !default;
+$phuyen-primary-blue-light: #5C63C7 !default;
+$phuyen-bg-light: #F3F5FF !default;
+$phuyen-text-dark: #1E2238 !default;
+$phuyen-success: #16A34A !default;
+$phuyen-warning: #F59E0B !default;
+
+// Gradient
+$phuyen-gradient: linear-gradient(135deg, #3F4594 0%, #5C63C7 100%) !default;
+$phuyen-gradient-hero: linear-gradient(135deg, #3F4594 0%, #5C63C7 60%, rgba(239, 43, 45, 0.1) 100%) !default;
+
+// Layout
+$phuyen-radius: 16px !default;
+$phuyen-radius-sm: 14px !default;
+$phuyen-shadow: 0 4px 24px rgba(63, 69, 148, 0.08) !default;
+$phuyen-shadow-hover: 0 8px 32px rgba(63, 69, 148, 0.12) !default;
+$phuyen-transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !default;
+
+// Sidebar
+$phuyen-sidebar-width: 280px !default;
+$phuyen-sidebar-bg: linear-gradient(180deg, $phuyen-primary-blue 0%, darken($phuyen-primary-blue, 8%) 100%) !default;

@@ -1,0 +1,20 @@
+{{!
+    @template theme_phuyen/coursecard
+
+    Course card - rounded, progress bar, Vào lớp ngay button.
+}}
+<div class="col-12 col-md-6 col-lg-4">
+    <div class="card phuyen-coursecard h-100">
+        <div class="card-body">
+            <h4 class="card-title h6">{{name}}</h4>
+            {{#progress}}
+            <div class="progress phuyen-progress mb-3" role="progressbar">
+                <div class="progress-bar" style="width: {{progress}}%"></div>
+            </div>
+            {{/progress}}
+            <a href="{{url}}" class="btn btn-primary w-100 phuyen-btn-enter">
+                {{#str}}entercourse, theme_phuyen{{/str}}
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,232 @@
+// ==========================================================================
+// Phu Yen University Theme - Main SCSS
+// ==========================================================================
+
+@import "variables";
+
+// Import Boost base
+@import "../../boost/scss/fontawesome";
+@import "../../boost/scss/bootstrap";
+@import "../../boost/scss/moodle";
+
+// ==========================================================================
+// Typography
+// ==========================================================================
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "Inter", "Roboto", "Segoe UI", system-ui, -apple-system, sans-serif;
+    color: $phuyen-text-dark;
+    background-color: $phuyen-bg-light;
+}
+
+// ==========================================================================
+// Navbar - Sticky, soft shadow
+// ==========================================================================
+.navbar {
+    background: $phuyen-gradient !important;
+    box-shadow: $phuyen-shadow;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link,
+.navbar .dropdown-toggle,
+.navbar .icon {
+    color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.navbar .dropdown-menu {
+    border-radius: $phuyen-radius-sm;
+    box-shadow: $phuyen-shadow-hover;
+}
+
+// Login/primary CTA button
+.btn-primary {
+    background: $phuyen-primary-red !important;
+    border: none;
+    border-radius: $phuyen-radius-sm;
+    padding: 0.5rem 1.25rem;
+    min-height: 44px;
+    transition: $phuyen-transition;
+}
+
+.btn-primary:hover {
+    background: darken($phuyen-primary-red, 6%) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba($phuyen-primary-red, 0.4);
+}
+
+// ==========================================================================
+// Cards - 16px radius, lift on hover
+// ==========================================================================
+.card,
+.block,
+.phuyen-card {
+    border-radius: $phuyen-radius !important;
+    box-shadow: $phuyen-shadow !important;
+    border: 1px solid rgba($phuyen-primary-blue, 0.06) !important;
+    transition: $phuyen-transition;
+}
+
+.card:hover,
+.block:hover,
+.phuyen-card:hover {
+    box-shadow: $phuyen-shadow-hover !important;
+    transform: translateY(-4px);
+}
+
+// ==========================================================================
+// Progress bars - Red accent
+// ==========================================================================
+.progress {
+    border-radius: 10px;
+    height: 10px;
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, $phuyen-primary-red 0%, darken($phuyen-primary-red, 5%) 100%) !important;
+    border-radius: 10px;
+}
+
+// ==========================================================================
+// Hero section
+// ==========================================================================
+.phuyen-hero {
+    background: $phuyen-gradient-hero;
+    border-radius: 0 0 $phuyen-radius $phuyen-radius;
+    padding: 3rem 2rem;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background: radial-gradient(ellipse at 100% 50%, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+    }
+}
+
+.phuyen-hero-title {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.phuyen-hero-subtitle {
+    font-size: 1.125rem;
+    opacity: 0.95;
+}
+
+.phuyen-cta-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.phuyen-btn-enter {
+    min-height: 48px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .phuyen-hero { padding: 2rem 1.25rem; }
+    .phuyen-hero-title { font-size: 1.5rem; }
+}
+
+// ==========================================================================
+// Sidebar - Dark blue
+// ==========================================================================
+.phuyen-sidebar,
+[data-region="drawer"],
+.drawer.drawer-left {
+    background: $phuyen-sidebar-bg !important;
+}
+
+.drawer .list-group-item,
+[data-region="drawer"] .list-group-item {
+    background: transparent !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.drawer .list-group-item:hover,
+.drawer .list-group-item.active {
+    background: rgba(255, 255, 255, 0.12) !important;
+    color: #fff !important;
+}
+
+// Active item red accent
+.drawer .list-group-item.active {
+    border-left: 4px solid $phuyen-primary-red;
+}
+
+// ==========================================================================
+// Dashboard - Stat cards
+// ==========================================================================
+.phuyen-stat-card {
+    border-radius: $phuyen-radius !important;
+    padding: 1.25rem;
+    transition: $phuyen-transition;
+}
+
+.phuyen-stat-card:hover {
+    transform: translateY(-2px);
+}
+
+// ==========================================================================
+// Deadline priority
+// ==========================================================================
+.phuyen-deadline-overdue { color: $phuyen-primary-red; }
+.phuyen-deadline-soon { color: $phuyen-warning; }
+.phuyen-deadline-done { color: $phuyen-success; }
+
+// ==========================================================================
+// Course cards
+// ==========================================================================
+.phuyen-coursecard .btn {
+    min-height: 44px;
+    border-radius: $phuyen-radius-sm;
+}
+
+// ==========================================================================
+// Main content
+// ==========================================================================
+#page.drawers .main-inner,
+.phuyen-main {
+    border-radius: $phuyen-radius;
+    box-shadow: $phuyen-shadow;
+    background: #fff;
+}
+
+// ==========================================================================
+// Columns2 layout
+// ==========================================================================
+.phuyen-page {
+    padding-top: 60px;
+}
+
+.phuyen-content.has-sidebar {
+    .phuyen-sidebar-column {
+        width: $phuyen-sidebar-width;
+        flex-shrink: 0;
+        padding-right: 1.5rem;
+    }
+    .phuyen-main-column {
+        min-width: 0;
+    }
+}
+
+.phuyen-main-content {
+    padding: 1.5rem 0;
+}
+
+@media (max-width: 768px) {
+    .phuyen-content.has-sidebar .phuyen-sidebar-column {
+        width: 100%;
+        order: 2;
+    }
+}

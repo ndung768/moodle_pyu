@@ -28,7 +28,9 @@ module.exports = grunt => {
             dist: {
                 files: {
                     "public/theme/boost/style/moodle.css": "public/theme/boost/scss/preset/default.scss",
-                    "public/theme/classic/style/moodle.css": "public/theme/classic/scss/classicgrunt.scss"
+                    "public/theme/classic/style/moodle.css": "public/theme/classic/scss/classicgrunt.scss",
+                    "public/theme/pyu/style/moodle.css": "public/theme/pyu/scss/preset/default.scss",
+                    "public/theme/phuyen/style/moodle.css": "public/theme/phuyen/scss/phuyen.scss"
                 }
             },
             options: {
@@ -36,6 +38,8 @@ module.exports = grunt => {
                 includePaths: [
                     "public/theme/boost/scss/",
                     "public/theme/classic/scss/",
+                    "public/theme/pyu/scss/",
+                    "public/theme/phuyen/scss/",
                 ]
             }
         },
