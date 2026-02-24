@@ -27,33 +27,23 @@ body {
     }
 }
 
-// Login page layout
-.pyu-login-wrapper {
-    background: var(--pyu-primary-light);
-    min-height: 100vh;
-}
-
 .pyu-login-page {
     max-width: 960px;
 }
 
-.pyu-login-hero {
-    background: linear-gradient(135deg, var(--pyu-primary) 0%, var(--pyu-primary-hover) 50%);
-    border-radius: var(--pyu-radius-lg);
-    padding: 1.6rem 1.8rem;
-    color: var(--pyu-text-inverse);
-    box-shadow: var(--pyu-shadow-md);
-}
-
 .pyu-login-title {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 700;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.15rem;
 }
 
 .pyu-login-subtitle {
-    font-size: 0.95rem;
-    opacity: 0.95;
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+.pyu-login-heading {
+    color: var(--pyu-text-secondary);
 }
 
 // PYU footer block with university information.
