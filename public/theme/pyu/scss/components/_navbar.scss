@@ -1,31 +1,82 @@
 //
-// PYU Navbar / Utility Bar
+// PYU Navbar / Brand Header
 // Sticky, clean, Canvas-style
 //
-+.navbar {
-+    background: var(--pyu-sidebar-bg) !important;
-+    box-shadow: var(--pyu-shadow-brand);
-+    padding-top: 0.6rem;
-+    padding-bottom: 0.6rem;
-+    font-size: 0.95rem;
-+}
-+
-+.navbar .navbar-brand,
-+.navbar .nav-link,
-+.navbar .btn-link,
-+.navbar .dropdown-toggle {
-+    color: var(--pyu-sidebar-text) !important;
-+}
-+
-+.navbar .navbar-brand:hover,
-+.navbar .nav-link:hover,
-+.navbar .dropdown-toggle:hover {
-+    color: var(--pyu-sidebar-text-hover) !important;
-+}
-+
-+.navbar .dropdown-menu {
-+    border-radius: var(--pyu-radius-lg);
-+    box-shadow: var(--pyu-shadow-lg);
-+    border: 1px solid var(--pyu-border);
-+}
+
+.pyu-brand-header {
+    background: #006cb7;
+    color: #fff;
+    box-shadow: var(--pyu-shadow-md);
+}
+
+.pyu-brand-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.pyu-brand-left {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.pyu-brand-text {
+    line-height: 1.25;
+}
+
+.pyu-brand-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.pyu-brand-subtitle {
+    font-size: 0.85rem;
+    opacity: 0.95;
+}
+
+.pyu-brand-right .form-control {
+    max-width: 260px;
+}
+
+.navbar {
+    background: var(--pyu-primary) !important;
+    box-shadow: var(--pyu-shadow-brand);
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    font-size: 0.95rem;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link,
+.navbar .btn-link,
+.navbar .dropdown-toggle {
+    color: var(--pyu-sidebar-text) !important;
+}
+
+.navbar .navbar-brand:hover,
+.navbar .nav-link:hover,
+.navbar .dropdown-toggle:hover {
+    color: var(--pyu-sidebar-text-hover) !important;
+}
+
+.navbar .dropdown-menu {
+    border-radius: var(--pyu-radius-lg);
+    box-shadow: var(--pyu-shadow-lg);
+    border: 1px solid var(--pyu-border);
+}
+
+@media (max-width: 768px) {
+    .pyu-brand-inner {
+        padding-inline: 1rem;
+    }
+    .pyu-brand-right {
+        display: none;
+    }
+}
 

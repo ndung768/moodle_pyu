@@ -27,6 +27,21 @@
 
     {{{ output.standard_top_of_body_html }}}
 
+    <header class="pyu-brand-header d-print-none">
+        <div class="pyu-brand-inner">
+            <div class="pyu-brand-left">
+                {{{ output.render_site_logo }}}
+                <div class="pyu-brand-text">
+                    <div class="pyu-brand-title">HỆ THỐNG HỌC TẬP TRỰC TUYẾN</div>
+                    <div class="pyu-brand-subtitle">TRƯỜNG ĐẠI HỌC PHÚ YÊN</div>
+                </div>
+            </div>
+            <div class="pyu-brand-right">
+                {{{ output.search_box }}}
+            </div>
+        </div>
+    </header>
+
     {{> theme_boost/navbar }}
     {{#courseindex}}
         {{< theme_boost/drawer }}
@@ -145,15 +160,31 @@
 
         <div class="pyu-footer mt-4">
             <div class="pyu-footer-inner">
-                <div class="pyu-footer-main">
-                    <div class="pyu-footer-title">Trường Đại học Phú Yên</div>
+                <div class="pyu-footer-col pyu-footer-logo">
+                    {{{ output.render_site_logo }}}
+                </div>
+                <div class="pyu-footer-col">
+                    <div class="pyu-footer-heading">THÔNG TIN</div>
+                    <div class="pyu-footer-line"><a href="https://pyu.edu.vn" target="_blank" rel="noreferrer">Trường Đại học Phú Yên</a></div>
+                    <div class="pyu-footer-line"><a href="https://pyu.edu.vn" target="_blank" rel="noreferrer">Trung tâm Công nghệ thông tin</a></div>
+                </div>
+                <div class="pyu-footer-col">
+                    <div class="pyu-footer-heading">LIÊN HỆ</div>
                     <div class="pyu-footer-line">Địa chỉ: 01 Nguyễn Văn Huyên - Phường Tuy Hòa - Tỉnh Đắk Lắk</div>
-                    <div class="pyu-footer-line">Điện thoại: 0257.3843025 - Fax: 0257.3842618 - 3842312</div>
+                    <div class="pyu-footer-line">Điện thoại: 0257.3843025</div>
+                    <div class="pyu-footer-line">Fax: 0257.3842618 - 3842312</div>
+                    <div class="pyu-footer-line">Email: info@pyu.edu.vn</div>
                 </div>
-                <div class="pyu-footer-meta">
-                    <div class="pyu-footer-line">© {{#str}} pluginname, theme_pyu {{/str}}</div>
-                    <div class="pyu-footer-line">Nền tảng LMS PYU trên Moodle 5.1.1+</div>
+                <div class="pyu-footer-col pyu-footer-apps">
+                    <div class="pyu-footer-heading">ỨNG DỤNG DI ĐỘNG</div>
+                    <div class="pyu-footer-line">
+                        <span class="pyu-footer-appbtn">Google Play</span>
+                        <span class="pyu-footer-appbtn">App Store</span>
+                    </div>
                 </div>
+            </div>
+            <div class="pyu-footer-bottom text-center mt-2">
+                © {{#str}} pluginname, theme_pyu {{/str}} - Phát triển trên nền tảng Moodle 5.1.1+
             </div>
         </div>
 
