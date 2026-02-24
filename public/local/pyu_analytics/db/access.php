@@ -15,16 +15,24 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Phu Yen University theme.
+ * PYU Analytics - capabilities.
  *
- * @package    theme_phuyen
+ * @package    local_pyu_analytics
  * @copyright  2025 Phu Yen University
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2025022300;
-$plugin->requires  = 2022041900;
-$plugin->component = 'theme_phuyen';
-$plugin->dependencies = ['theme_boost' => 2022032200];
+$capabilities = [
+    'local/pyu_analytics:view' => [
+        'riskbitmask' => RISK_PERSONAL,
+        'captype' => 'read',
+        'contextlevel' => CONTEXT_SYSTEM,
+        'archetypes' => [
+            'manager' => CAP_ALLOW,
+            'editingteacher' => CAP_ALLOW,
+            'coursecreator' => CAP_ALLOW,
+        ],
+    ],
+];

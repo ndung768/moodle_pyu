@@ -1,0 +1,23 @@
+{{!
+    @template local_pyu_analytics/faculty_table
+}}
+<table class="table table-sm">
+    <thead>
+        <tr>
+            <th>{{#str}}name{{/str}}</th>
+            <th class="text-end">DTI</th>
+            <th class="text-end">{{#str}}engagementrate, local_pyu_analytics{{/str}}</th>
+            <th class="text-end">{{#str}}coursesrunning, local_pyu_analytics{{/str}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#rows}}
+        <tr>
+            <td>{{fullname}}</td>
+            <td class="text-end">{{dtiscore}}</td>
+            <td class="text-end">{{engagementrate}}%</td>
+            <td class="text-end">{{coursecount}}</td>
+        </tr>
+        {{/rows}}
+    </tbody>
+</table>

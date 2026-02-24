@@ -15,26 +15,16 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Single column layout.
+ * PYU Analytics Dashboard - version.
  *
- * @package   theme_phuyen
- * @copyright 2025 Phu Yen University
- * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package    local_pyu_analytics
+ * @copyright  2025 Phu Yen University
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$bodyattributes = $OUTPUT->body_attributes([]);
-$templatecontext = [
-    'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), 'escape' => false]),
-    'output' => $OUTPUT,
-    'bodyattributes' => $bodyattributes,
-];
-
-if (empty($PAGE->layout_options['noactivityheader'])) {
-    $header = $PAGE->activityheader;
-    $renderer = $PAGE->get_renderer('core');
-    $templatecontext['headercontent'] = $header->export_for_template($renderer);
-}
-
-echo $OUTPUT->render_from_template('theme_boost/columns1', $templatecontext);
+$plugin->component = 'local_pyu_analytics';
+$plugin->version   = 2025062400;
+$plugin->requires  = 2025092600;
+$plugin->maturity  = MATURITY_ALPHA;

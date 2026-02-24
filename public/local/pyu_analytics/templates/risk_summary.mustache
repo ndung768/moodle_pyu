@@ -1,0 +1,12 @@
+{{!
+    @template local_pyu_analytics/risk_summary
+}}
+{{#items}}
+<div class="d-flex justify-content-between align-items-center py-2 border-bottom">
+    <span>{{label}}</span>
+    <span class="badge bg-{{level}} text-white">{{count}}</span>
+</div>
+{{/items}}
+{{^items}}
+<p class="text-muted mb-0">{{#str}}noresults, core{{/str}}</p>
+{{/items}}

@@ -15,36 +15,11 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Phu Yen University core renderer.
+ * PYU Analytics - library functions.
  *
- * @package    theme_phuyen
+ * @package    local_pyu_analytics
  * @copyright  2025 Phu Yen University
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace theme_phuyen\output;
-
 defined('MOODLE_INTERNAL') || die();
-
-class core_renderer extends \theme_boost\output\core_renderer {
-
-    /**
-     * Renders the dashboard template with optional context.
-     *
-     * @param array $context Template context.
-     * @return string HTML.
-     */
-    public function render_dashboard(array $context = []): string {
-        return $this->render_from_template('theme_phuyen/dashboard', $context);
-    }
-
-    /**
-     * Renders a course card.
-     *
-     * @param array $course Course data (name, url, progress).
-     * @return string HTML.
-     */
-    public function render_coursecard(array $course): string {
-        return $this->render_from_template('theme_phuyen/coursecard', $course);
-    }
-}

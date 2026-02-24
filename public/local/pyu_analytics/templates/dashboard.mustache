@@ -1,0 +1,69 @@
+{{!
+    @template local_pyu_analytics/dashboard
+
+    PYU Analytics Dashboard - Executive view.
+}}
+<div class="pyu-analytics-dashboard" data-region="pyu-analytics-dashboard">
+    <div class="pyu-kpi-row row g-3 mb-4">
+        {{#kpis}}
+        <div class="col-6 col-md-4 col-xl-2">
+            <div class="card pyu-kpi-card h-100">
+                <div class="card-body">
+                    <div class="pyu-kpi-label small text-muted">{{label}}</div>
+                    <div class="pyu-kpi-value h4 mb-1">{{value}}</div>
+                    {{#delta_percent}}
+                    <div class="pyu-kpi-delta small {{delta_class}}">
+                        <span class="pyu-kpi-arrow">{{delta_icon}}</span>
+                        <span>{{delta_percent}}%</span>
+                    </div>
+                    {{/delta_percent}}
+                </div>
+            </div>
+        </div>
+        {{/kpis}}
+    </div>
+
+    <div class="row g-4 mb-4">
+        <div class="col-xl-8">
+            <div class="card">
+                <div class="card-header">{{#str}}studentengagement, local_pyu_analytics{{/str}}</div>
+                <div class="card-body">
+                    <canvas id="engagementTrendChart" height="200"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4">
+            <div class="card">
+                <div class="card-header">{{#str}}riskalerts, local_pyu_analytics{{/str}}</div>
+                <div class="card-body">
+                    {{{ risk_summary }}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-xl-6">
+            <div class="card">
+                <div class="card-header">{{#str}}facultycomparison, local_pyu_analytics{{/str}}</div>
+                <div class="card-body table-responsive">
+                    {{{ faculty_table }}}
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6">
+            <div class="card">
+                <div class="card-header">{{#str}}courseheatmap, local_pyu_analytics{{/str}}</div>
+                <div class="card-body">
+                    <canvas id="courseHeatmap" height="200"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{#js}}
+require(['local_pyu_analytics/chart'], function(Chart) {
+    Chart.init({{{ engagement_data }}}, {{{ heatmap_data }}});
+});
+{{/js}}
