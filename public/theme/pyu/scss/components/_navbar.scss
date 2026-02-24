@@ -52,6 +52,11 @@
     font-size: 0.95rem;
 }
 
+// When Boost pins the navbar to the top, keep a solid brand background.
+.navbar.fixed-top {
+    background: var(--pyu-primary-active) !important;
+}
+
 .navbar .navbar-brand,
 .navbar .nav-link,
 .navbar .btn-link,
