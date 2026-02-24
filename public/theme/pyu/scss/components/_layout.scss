@@ -27,6 +27,83 @@ body {
     }
 }
 
+// Login page layout
+.pyu-login-wrapper {
+    background: var(--pyu-primary-light);
+    min-height: 100vh;
+}
+
+.pyu-login-page {
+    max-width: 960px;
+}
+
+.pyu-login-hero {
+    background: linear-gradient(135deg, var(--pyu-primary) 0%, var(--pyu-primary-hover) 50%);
+    border-radius: var(--pyu-radius-lg);
+    padding: 1.6rem 1.8rem;
+    color: var(--pyu-text-inverse);
+    box-shadow: var(--pyu-shadow-md);
+}
+
+.pyu-login-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.pyu-login-subtitle {
+    font-size: 0.95rem;
+    opacity: 0.95;
+}
+
+// PYU footer block with university information.
+.pyu-footer {
+    padding: var(--pyu-space-4) var(--pyu-space-4) var(--pyu-space-2);
+}
+
+.pyu-footer-inner {
+    border-top: 1px solid var(--pyu-neutral-200);
+    padding-top: var(--pyu-space-3);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--pyu-space-3);
+    font-size: 0.85rem;
+    color: var(--pyu-text-muted);
+}
+
+.pyu-footer-main {
+    flex: 2 1 260px;
+}
+
+.pyu-footer-meta {
+    flex: 1 1 180px;
+    text-align: right;
+}
+
+.pyu-footer-title {
+    font-weight: 600;
+    color: var(--pyu-text-primary);
+    margin-bottom: 0.15rem;
+}
+
+.pyu-footer-line {
+    line-height: 1.5;
+}
+
+.pyu-footer a {
+    color: var(--pyu-link);
+}
+
+.pyu-footer a:hover {
+    color: var(--pyu-link-hover);
+}
+
+@media (max-width: 768px) {
+    .pyu-footer-meta {
+        text-align: left;
+    }
+}
+
 #page-content {
     position: relative;
 }

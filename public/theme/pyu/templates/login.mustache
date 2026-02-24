@@ -1,0 +1,55 @@
+{{!
+    PYU login layout - adds university header and footer
+}}
+{{> theme_boost/head }}
+
+<body {{{ bodyattributes }}}>
+{{> core/local/toast/wrapper}}
+
+<div id="page-wrapper" class="pyu-login-wrapper">
+
+    {{{ output.standard_top_of_body_html }}}
+
+    <div id="page" class="container py-5 pyu-login-page">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8 col-xl-6">
+                <div class="pyu-login-hero" role="banner">
+                    <div class="pyu-login-logo-title">
+                        <div class="pyu-login-title">Trường Đại học Phú Yên</div>
+                        <div class="pyu-login-subtitle">Hệ thống Học tập Trực tuyến PYU LMS</div>
+                    </div>
+                </div>
+
+                <div class="login-wrapper mt-3">
+                    <div class="login-container">
+                        {{{ output.main_content }}}
+                    </div>
+                </div>
+
+                <div class="pyu-footer mt-4">
+                    <div class="pyu-footer-inner">
+                        <div class="pyu-footer-main">
+                            <div class="pyu-footer-title">Trường Đại học Phú Yên</div>
+                            <div class="pyu-footer-line">Địa chỉ: 01 Nguyễn Văn Huyên - Phường Tuy Hòa - Tỉnh Đắk Lắk</div>
+                            <div class="pyu-footer-line">Điện thoại: 0257.3843025 - Fax: 0257.3842618 - 3842312</div>
+                        </div>
+                        <div class="pyu-footer-meta">
+                            <div class="pyu-footer-line">Nền tảng LMS PYU trên Moodle 5.1.1+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
+{{#js}}
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+  M.util.js_complete('theme_boost/loader');
+});
+{{/js}}
+
