@@ -1,0 +1,82 @@
+//
+// PYU Design System - Color Tokens
+// Academic-first, Canvas LMS-inspired
+// WCAG AA compliant
+//
+
+// CSS Custom Properties for runtime flexibility
+:root {
+    // Primary - PYU Academic Navy
+    --pyu-primary: #3F4594;
+    --pyu-primary-hover: #4e54a8;
+    --pyu-primary-active: #333a7a;
+    --pyu-primary-light: #e8e9f2;
+    --pyu-primary-rgb: 63, 69, 148;
+
+    // Accent - PYU Red (semantic: danger, completion)
+    --pyu-accent: #EF2B2D;
+    --pyu-accent-hover: #f24a4c;
+    --pyu-accent-light: #fde8e8;
+    --pyu-accent-rgb: 239, 43, 45;
+
+    // Neutral scale
+    --pyu-neutral-0: #ffffff;
+    --pyu-neutral-50: #f8f9fa;
+    --pyu-neutral-100: #f1f3f5;
+    --pyu-neutral-200: #e9ecef;
+    --pyu-neutral-300: #dee2e6;
+    --pyu-neutral-400: #ced4da;
+    --pyu-neutral-500: #adb5bd;
+    --pyu-neutral-600: #6c757d;
+    --pyu-neutral-700: #495057;
+    --pyu-neutral-800: #343a40;
+    --pyu-neutral-900: #1d2125;
+    --pyu-neutral-950: #0d0f11;
+
+    // Semantic
+    --pyu-success: #357a32;
+    --pyu-success-light: #d4edda;
+    --pyu-warning: #f0ad4e;
+    --pyu-warning-light: #fff3cd;
+    --pyu-info: #008196;
+    --pyu-info-light: #d1ecf1;
+    --pyu-danger: var(--pyu-accent);
+
+    // Surface
+    --pyu-surface: var(--pyu-neutral-0);
+    --pyu-surface-raised: var(--pyu-neutral-0);
+    --pyu-surface-overlay: var(--pyu-neutral-0);
+    --pyu-border: var(--pyu-neutral-200);
+    --pyu-border-focus: var(--pyu-primary);
+
+    // Text
+    --pyu-text-primary: var(--pyu-neutral-900);
+    --pyu-text-secondary: var(--pyu-neutral-700);
+    --pyu-text-muted: var(--pyu-neutral-600);
+    --pyu-text-inverse: var(--pyu-neutral-0);
+    --pyu-link: var(--pyu-primary);
+    --pyu-link-hover: var(--pyu-primary-active);
+
+    // Sidebar (Canvas-style)
+    --pyu-sidebar-bg: var(--pyu-primary);
+    --pyu-sidebar-text: rgba(255, 255, 255, 0.9);
+    --pyu-sidebar-text-hover: #fff;
+    --pyu-sidebar-active-bg: rgba(255, 255, 255, 0.2);
+    --pyu-sidebar-width: 240px;
+    --pyu-sidebar-collapsed-width: 64px;
+
+    // Utility bar
+    --pyu-utilitybar-bg: var(--pyu-neutral-0);
+    --pyu-utilitybar-border: var(--pyu-neutral-200);
+    --pyu-utilitybar-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+// Dark mode ready (structure for future)
+[data-bs-theme="dark"] {
+    --pyu-surface: var(--pyu-neutral-900);
+    --pyu-surface-raised: var(--pyu-neutral-800);
+    --pyu-text-primary: var(--pyu-neutral-50);
+    --pyu-text-secondary: var(--pyu-neutral-200);
+    --pyu-text-muted: var(--pyu-neutral-400);
+    --pyu-border: var(--pyu-neutral-700);
+}

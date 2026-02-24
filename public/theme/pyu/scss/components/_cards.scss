@@ -1,0 +1,27 @@
+//
+// PYU Card Components
+// Enterprise card styling
+//
+
+.card,
+.block,
+.bg-white {
+    border-radius: var(--pyu-radius-lg) !important;
+    box-shadow: var(--pyu-shadow-sm) !important;
+    border: 1px solid var(--pyu-border) !important;
+    transition: box-shadow 0.2s ease;
+}
+
+.card:hover,
+.block:hover {
+    box-shadow: var(--pyu-shadow-md) !important;
+}
+
+.card-body {
+    border-radius: 0 0 var(--pyu-radius-lg) var(--pyu-radius-lg);
+}
+
+.card-header {
+    border-radius: var(--pyu-radius-lg) var(--pyu-radius-lg) 0 0;
+    border-bottom: 1px solid var(--pyu-border);
+}

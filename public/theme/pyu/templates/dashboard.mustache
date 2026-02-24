@@ -1,0 +1,17 @@
+{{!
+    @template theme_pyu/dashboard
+
+    Canvas-inspired dashboard layout.
+    Course cards, blocks, hero.
+}}
+<div class="pyu-dashboard" data-region="pyu-dashboard">
+    {{#showhero}}
+    <div class="pyu-hero" role="banner">
+        <h1 class="pyu-hero-title">{{heroheading}}</h1>
+        <p class="pyu-hero-subtitle">{{herosubheading}}</p>
+    </div>
+    {{/showhero}}
+    <div class="pyu-dashboard-content">
+        {{{ output.main_content }}}
+    </div>
+</div>

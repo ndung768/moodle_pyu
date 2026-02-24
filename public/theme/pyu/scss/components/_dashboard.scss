@@ -1,0 +1,78 @@
+//
+// PYU Dashboard - Canvas-inspired
+// Course cards, announcements, to-do, deadlines, progress
+//
+
+// Hero for dashboard
+body.pagelayout-mydashboard,
+body.pagelayout-frontpage,
+body.pagelayout-mycourses {
+    #page.drawers .main-inner {
+        padding-top: 0 !important;
+        overflow: hidden;
+    }
+}
+
+.pyu-hero {
+    background: linear-gradient(135deg, var(--pyu-primary) 0%, var(--pyu-primary-hover) 50%, rgba(var(--pyu-accent-rgb), 0.15) 100%);
+    border-radius: var(--pyu-radius-lg) var(--pyu-radius-lg) 0 0;
+    padding: var(--pyu-space-8) var(--pyu-space-6);
+    margin: calc(-1 * var(--pyu-space-6)) calc(-1 * var(--pyu-space-6)) var(--pyu-space-6) calc(-1 * var(--pyu-space-6));
+    color: var(--pyu-text-inverse);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40%;
+        height: 100%;
+        background: radial-gradient(ellipse at 100% 50%, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+        pointer-events: none;
+    }
+}
+
+.pyu-hero-title {
+    font-size: var(--pyu-text-2xl);
+    font-weight: var(--pyu-font-weight-semibold);
+    margin: 0 0 var(--pyu-space-2);
+}
+
+.pyu-hero-subtitle {
+    font-size: var(--pyu-text-base);
+    opacity: 0.95;
+    margin: 0;
+}
+
+// Course cards grid
+.pyu-dashboard-courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--pyu-space-4);
+}
+
+.pyu-course-card {
+    border-radius: var(--pyu-radius-lg);
+    box-shadow: var(--pyu-shadow-sm);
+    border: 1px solid var(--pyu-border);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.pyu-course-card:hover {
+    box-shadow: var(--pyu-shadow-md);
+}
+
+// Progress bars
+.progress,
+.progress-bar {
+    border-radius: var(--pyu-radius-md);
+    height: 8px;
+}
+
+.progress-bar.bg-primary,
+.progress-bar.bg-success,
+.completion-progress .progress-bar {
+    background: var(--pyu-accent) !important;
+}

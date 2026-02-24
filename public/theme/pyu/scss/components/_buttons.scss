@@ -1,0 +1,34 @@
+//
+// PYU Buttons
+//
+
+.btn-primary {
+    background: var(--pyu-primary);
+    border: none;
+    border-radius: var(--pyu-radius-lg);
+    box-shadow: var(--pyu-shadow-brand);
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover {
+    background: var(--pyu-primary-hover);
+    box-shadow: var(--pyu-shadow-lg);
+}
+
+.btn-danger {
+    background: var(--pyu-accent);
+    border: none;
+    border-radius: var(--pyu-radius-lg);
+}
+
+.btn-danger:hover {
+    background: var(--pyu-accent-hover);
+}
+
+// Focus states - accessibility
+.btn:focus-visible,
+.form-control:focus-visible,
+.form-select:focus-visible {
+    outline: 2px solid var(--pyu-border-focus);
+    outline-offset: 2px;
+}

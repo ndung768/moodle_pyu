@@ -14,17 +14,25 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-/**
- * Phu Yen University theme.
- *
- * @package    theme_pyu
- * @copyright  2025 Phu Yen University
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- */
+namespace theme_pyu\output;
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2025062400;
-$plugin->requires  = 2025092600;
-$plugin->component = 'theme_pyu';
-$plugin->dependencies = ['theme_boost' => 2025092600];
+/**
+ * PYU theme renderer - extends Boost, Moodle 5 compatible.
+ *
+ * @package   theme_pyu
+ * @copyright 2025 Phu Yen University
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+class core_renderer extends \theme_boost\output\core_renderer {
+
+    /**
+     * Render breadcrumb/navbar - Canvas-style utility bar integration.
+     *
+     * @return string
+     */
+    public function navbar(): string {
+        return parent::navbar();
+    }
+}

@@ -1,0 +1,18 @@
+//
+// PYU Course Index Enhancement
+// Moodle 5 course index drawer - style only, no structural changes
+//
+
+// Section completion indicators
+.courseindex-section {
+    .completion-progress {
+        .progress-bar {
+            background: var(--pyu-accent) !important;
+        }
+    }
+}
+
+// Section nav active state
+.courseindex-item.active {
+    background: var(--pyu-sidebar-active-bg) !important;
+}

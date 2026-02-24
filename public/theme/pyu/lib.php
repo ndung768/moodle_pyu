@@ -15,7 +15,8 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Phu Yen University theme functions.
+ * PYU Theme - Enterprise Design System
+ * Moodle 5.x functions
  *
  * @package    theme_pyu
  * @copyright  2025 Phu Yen University
@@ -32,15 +33,12 @@ defined('MOODLE_INTERNAL') || die();
  */
 function theme_pyu_get_main_scss_content($theme) {
     global $CFG;
-
-    $scss = '';
-    $scss .= file_get_contents($CFG->dirroot . '/theme/pyu/scss/preset/default.scss');
-
+    $scss = file_get_contents($CFG->dirroot . '/theme/pyu/scss/preset/default.scss');
     return $scss;
 }
 
 /**
- * Get SCSS to prepend.
+ * Get SCSS to prepend (variables from settings).
  *
  * @param theme_config $theme The theme config object.
  * @return string
@@ -48,11 +46,9 @@ function theme_pyu_get_main_scss_content($theme) {
 function theme_pyu_get_pre_scss($theme) {
     $scss = '';
 
-    // PYU brand variables (override Bootstrap).
-    $scss .= '$pyu-primary-blue: #3F4594 !default;' . "\n";
-    $scss .= '$pyu-primary-red: #EF2B2D !default;' . "\n";
-    $scss .= '$primary: $pyu-primary-blue !default;' . "\n";
-    $scss .= '$danger: $pyu-primary-red !default;' . "\n";
+    if (!empty($theme->settings->primarycolour)) {
+        $scss .= '$primary: ' . $theme->settings->primarycolour . ";\n";
+    }
 
     if (defined('BEHAT_SITE_RUNNING')) {
         $scss .= "\$behatsite: true;\n";
@@ -66,7 +62,7 @@ function theme_pyu_get_pre_scss($theme) {
 }
 
 /**
- * Inject additional SCSS.
+ * Get extra SCSS.
  *
  * @param theme_config $theme The theme config object.
  * @return string
@@ -82,9 +78,9 @@ function theme_pyu_get_extra_scss($theme) {
 }
 
 /**
- * Get compiled css.
+ * Get precompiled CSS.
  *
- * @return string compiled css
+ * @return string
  */
 function theme_pyu_get_precompiled_css() {
     global $CFG;
@@ -93,4 +89,28 @@ function theme_pyu_get_precompiled_css() {
         return file_get_contents($path);
     }
     return theme_boost_get_precompiled_css();
+}
+
+/**
+ * Serves theme files.
+ *
+ * @param stdClass $course
+ * @param stdClass $cm
+ * @param context $context
+ * @param string $filearea
+ * @param array $args
+ * @param bool $forcedownload
+ * @param array $options
+ * @return bool
+ */
+function theme_pyu_pluginfile($course, $cm, $context, $filearea, $args, $forcedownload, array $options = []) {
+    if ($context->contextlevel == CONTEXT_SYSTEM &&
+            ($filearea === 'logo' || $filearea === 'favicon' || $filearea === 'backgroundimage')) {
+        $theme = theme_config::load('pyu');
+        if (!array_key_exists('cacheability', $options)) {
+            $options['cacheability'] = 'public';
+        }
+        return $theme->setting_file_serve($filearea, $args, $forcedownload, $options);
+    }
+    return false;
 }

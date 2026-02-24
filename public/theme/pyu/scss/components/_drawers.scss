@@ -1,0 +1,41 @@
+//
+// PYU Drawers / Sidebar
+// 240px desktop, collapsible, Moodle 5 course index compatible
+//
+
+.drawer,
+[data-region="drawer"],
+#theme_boost-drawers-courseindex,
+#theme_boost-drawers-blocks {
+    background: var(--pyu-sidebar-bg) !important;
+}
+
+.drawer .list-group-item,
+.drawer .drawercontent .list-group-item {
+    background: transparent !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+    color: var(--pyu-sidebar-text) !important;
+    border-radius: var(--pyu-radius-md) !important;
+}
+
+.drawer .list-group-item:hover,
+.drawer .list-group-item-action:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: var(--pyu-sidebar-text-hover) !important;
+}
+
+.drawer .list-group-item.active,
+.drawer .list-group-item-action.active {
+    background: var(--pyu-sidebar-active-bg) !important;
+    color: var(--pyu-sidebar-text-hover) !important;
+}
+
+.drawer .drawerheader,
+.drawerheader {
+    background: rgba(0, 0, 0, 0.15) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.drawer .icon {
+    color: var(--pyu-sidebar-text) !important;
+}

@@ -1,0 +1,23 @@
+//
+// PYU Layout
+// Canvas-style structure, utility bar, main content
+//
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: var(--pyu-font-sans);
+    color: var(--pyu-text-primary);
+}
+
+#page.drawers .main-inner {
+    border-radius: var(--pyu-radius-lg);
+    box-shadow: var(--pyu-shadow-md);
+    border: 1px solid var(--pyu-border);
+    padding: var(--pyu-space-6) var(--pyu-space-6) var(--pyu-space-8);
+    background: var(--pyu-surface);
+}
+
+#page-content {
+    position: relative;
+}

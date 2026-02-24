@@ -1,0 +1,11 @@
+//
+// PYU Utility Bar
+// Sticky top bar (breadcrumb, page title, user)
+//
+
+.pyu-utility-bar {
+    background: var(--pyu-utilitybar-bg);
+    border-bottom: 1px solid var(--pyu-utilitybar-border);
+    box-shadow: var(--pyu-utilitybar-shadow);
+    padding: var(--pyu-space-2) var(--pyu-space-4);
+}

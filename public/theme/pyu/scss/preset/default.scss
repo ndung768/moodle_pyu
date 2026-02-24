@@ -1,25 +1,31 @@
 //
-// Phu Yen University Theme - Boost-based preset
-// Brand: Primary Blue #3F4594 | Primary Red #EF2B2D
-// Design: Card-style UI, 14px radius, soft shadows, gradient hero, blue sidebar
+// PYU Theme - Enterprise Preset
+// Moodle 5.x | Bootstrap 5 | Canvas LMS-inspired
 //
 
-// PYU brand colors (pre_scss sets $primary and $danger)
-$pyu-primary-blue: #3F4594 !default;
-$pyu-primary-red: #EF2B2D !default;
-$pyu-primary-blue-light: lighten($pyu-primary-blue, 12%) !default;
-$pyu-primary-blue-dark: darken($pyu-primary-blue, 8%) !default;
+// Design tokens (CSS custom properties)
+@import "../tokens/index";
 
-// Design tokens
-$pyu-border-radius: 14px !default;
-$pyu-shadow-soft: 0 4px 20px rgba(63, 69, 148, 0.08) !default;
-$pyu-shadow-card: 0 2px 12px rgba(0, 0, 0, 0.06), 0 4px 24px rgba(63, 69, 148, 0.04) !default;
-$pyu-transition: all 0.25s ease !default;
+// Bootstrap variable overrides (SCSS - before Bootstrap import)
+$pyu-primary: #3F4594 !default;
+$pyu-accent: #EF2B2D !default;
+$primary: $pyu-primary !default;
+$danger: $pyu-accent !default;
+$border-radius: 0.625rem !default;
+$border-radius-lg: 0.875rem !default;
 
-// Import base from Boost parent (relative to preset/ = 3 levels up to theme/)
+// Import Boost base (FontAwesome, Bootstrap, Moodle)
 @import "../../../boost/scss/fontawesome";
 @import "../../../boost/scss/bootstrap";
 @import "../../../boost/scss/moodle";
 
-// Import PYU customizations
-@import "pyu/overrides";
+// PYU component overrides
+@import "../components/layout";
+@import "../components/navbar";
+@import "../components/drawers";
+@import "../components/courseindex";
+@import "../components/dashboard";
+@import "../components/cards";
+@import "../components/buttons";
+@import "../components/forms";
+@import "../components/utilitybar";

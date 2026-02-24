@@ -1,0 +1,18 @@
+//
+// PYU Theme - Enterprise Design System
+// Moodle 5.x | Bootstrap 5 | Canvas LMS-inspired
+//
+
+// Design tokens
+@import "tokens/index";
+
+// PYU components (override Boost)
+@import "components/layout";
+@import "components/navbar";
+@import "components/drawers";
+@import "components/courseindex";
+@import "components/dashboard";
+@import "components/cards";
+@import "components/buttons";
+@import "components/forms";
+@import "components/utilitybar";

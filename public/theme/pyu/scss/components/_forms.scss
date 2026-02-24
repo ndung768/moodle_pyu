@@ -1,0 +1,15 @@
+//
+// PYU Forms
+//
+
+.form-control,
+.form-select {
+    border-radius: var(--pyu-radius-md);
+    border-color: var(--pyu-border);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--pyu-border-focus);
+    box-shadow: 0 0 0 0.2rem rgba(var(--pyu-primary-rgb), 0.2);
+}

@@ -1,0 +1,26 @@
+//
+// PYU Design System - Typography Tokens
+// Academic-first, readable
+//
+
+:root {
+    --pyu-font-sans: "Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --pyu-font-mono: ui-monospace, "Cascadia Code", "Source Code Pro", monospace;
+
+    --pyu-text-xs: 0.75rem;     // 12px
+    --pyu-text-sm: 0.8125rem;   // 13px
+    --pyu-text-base: 0.9375rem;  // 15px (Moodle default)
+    --pyu-text-lg: 1.0625rem;   // 17px
+    --pyu-text-xl: 1.25rem;     // 20px
+    --pyu-text-2xl: 1.5rem;     // 24px
+    --pyu-text-3xl: 1.875rem;   // 30px
+
+    --pyu-line-height-tight: 1.25;
+    --pyu-line-height-normal: 1.5;
+    --pyu-line-height-relaxed: 1.625;
+
+    --pyu-font-weight-normal: 400;
+    --pyu-font-weight-medium: 500;
+    --pyu-font-weight-semibold: 600;
+    --pyu-font-weight-bold: 700;
+}
