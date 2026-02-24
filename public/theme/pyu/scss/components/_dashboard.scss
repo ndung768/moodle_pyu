@@ -62,6 +62,7 @@ body.pagelayout-mycourses {
 
 .pyu-course-card:hover {
     box-shadow: var(--pyu-shadow-md);
+    transform: translateY(-1px);
 }
 
 // Progress bars

@@ -16,3 +16,22 @@
 .courseindex-item.active {
     background: var(--pyu-sidebar-active-bg) !important;
 }
+
+// Compact, more scannable course index
+.drawer-left .courseindex {
+    font-size: 0.85rem;
+}
+
+.courseindex .courseindex-section-title {
+    font-weight: 600;
+    margin-top: 0.35rem;
+}
+
+// Ensure good contrast for links on navy sidebar background.
+.drawer .courseindex a {
+    color: var(--pyu-sidebar-text) !important;
+}
+
+.drawer .courseindex a:hover {
+    color: var(--pyu-sidebar-text-hover) !important;
+}

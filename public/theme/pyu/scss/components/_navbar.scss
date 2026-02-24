@@ -2,27 +2,30 @@
 // PYU Navbar / Utility Bar
 // Sticky, clean, Canvas-style
 //
++.navbar {
++    background: var(--pyu-sidebar-bg) !important;
++    box-shadow: var(--pyu-shadow-brand);
++    padding-top: 0.6rem;
++    padding-bottom: 0.6rem;
++    font-size: 0.95rem;
++}
++
++.navbar .navbar-brand,
++.navbar .nav-link,
++.navbar .btn-link,
++.navbar .dropdown-toggle {
++    color: var(--pyu-sidebar-text) !important;
++}
++
++.navbar .navbar-brand:hover,
++.navbar .nav-link:hover,
++.navbar .dropdown-toggle:hover {
++    color: var(--pyu-sidebar-text-hover) !important;
++}
++
++.navbar .dropdown-menu {
++    border-radius: var(--pyu-radius-lg);
++    box-shadow: var(--pyu-shadow-lg);
++    border: 1px solid var(--pyu-border);
++}
 
-.navbar {
-    background: var(--pyu-sidebar-bg) !important;
-    box-shadow: var(--pyu-shadow-brand);
-}
-
-.navbar .navbar-brand,
-.navbar .nav-link,
-.navbar .btn-link,
-.navbar .dropdown-toggle {
-    color: var(--pyu-sidebar-text) !important;
-}
-
-.navbar .navbar-brand:hover,
-.navbar .nav-link:hover,
-.navbar .dropdown-toggle:hover {
-    color: var(--pyu-sidebar-text-hover) !important;
-}
-
-.navbar .dropdown-menu {
-    border-radius: var(--pyu-radius-lg);
-    box-shadow: var(--pyu-shadow-lg);
-    border: 1px solid var(--pyu-border);
-}
