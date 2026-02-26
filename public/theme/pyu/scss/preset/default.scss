@@ -4,7 +4,8 @@
 //
 
 // Design tokens (CSS custom properties)
-@import "../tokens/index";
+// Dùng đúng tên file partial có sẵn (_index.scss) để tránh lỗi SCSS trên server.
+@import "../tokens/_index";
 
 // Bootstrap variable overrides (SCSS - before Bootstrap import)
 $pyu-primary: #3F4594 !default;
