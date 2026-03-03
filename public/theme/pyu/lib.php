@@ -32,9 +32,9 @@ defined('MOODLE_INTERNAL') || die();
  * @return string
  */
 function theme_pyu_get_main_scss_content($theme) {
-    global $CFG;
-    $scss = file_get_contents($CFG->dirroot . '/theme/pyu/scss/preset/default.scss');
-    return $scss;
+    $path = (isset($theme->dir) ? $theme->dir : '') . '/scss/preset/default.scss';
+    $scss = @file_get_contents($path);
+    return ($scss !== false && $scss !== '') ? $scss : "/* theme_pyu: preset file not found */\n";
 }
 
 /**
